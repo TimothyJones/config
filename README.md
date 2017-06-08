@@ -1,5 +1,5 @@
-timconfig
-========
+Tim's Config Files
+==================
 
 Configuration settings that I find useful. Probably not useful to you?
 
