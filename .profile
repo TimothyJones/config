@@ -1,4 +1,6 @@
 export SCALA_HOME=/usr/local/share/scala
+export GRADLE_USER_HOME=/usr/local/opt/gradle/libexec/
+
 export GOPATH=~/go
 
 export CLICOLOR=1
