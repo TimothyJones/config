@@ -4,7 +4,7 @@ SCRIPT_DIR=`cd $(dirname "$0"); pwd` # Script can now run from anywhere
 
 function inst {
   if [ -f ~/."$1" ] ; then
-    DIFF=$(diff ~/."$1" "$SCRIPT_DIR"/."$1")
+    DIFF=$(diff ~/."$1" "$SCRIPT_DIR"/master-config/."$1")
     if [ "$DIFF" != "" ] ;
     then
       error "Skipping $1, because there's a different local version"
@@ -13,7 +13,7 @@ function inst {
     fi 
   else 
     log "Installing $1"
-    ln -s "$SCRIPT_DIR"/."$1" ~/."$1"
+    ln -s "$SCRIPT_DIR"/master-config/."$1" ~/."$1"
   fi
 }
 
