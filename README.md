@@ -8,8 +8,7 @@ Configuration settings that I find useful. Probably not useful to you?
 
 ```
 git clone https://github.com/TimothyJones/timconfig.git
-cd timconfig
-./install.sh
+timconfig/install.sh
 ```
 
 ## Configure apps
