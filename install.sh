@@ -1,6 +1,6 @@
 #!/bin/bash -eu
 SCRIPT_DIR=`cd $(dirname "$0"); pwd` # Script can now run from anywhere
-. "$SCRIPT_DIR"/timbash/lib-logging.sh       # Set up logging
+. "$SCRIPT_DIR"/timbash/lib/lib-logging.sh       # Set up logging
 
 function inst {
   if [ -f ~/."$1" ] ; then
@@ -15,7 +15,7 @@ function inst {
     log "Installing $1"
     ln -s `pwd`/."$1" ~/."$1"
   fi
-}  
+}
 
 inst vimrc
 inst profile
