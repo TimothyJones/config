@@ -13,7 +13,7 @@ timconfig/install.sh
 
 ## Configure apps
 
-* [Intellij settings](intellij.md)
+* [Intellij settings](instructions/intellij.md)
 
 ## Misc commands
 
