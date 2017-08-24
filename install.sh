@@ -25,7 +25,7 @@ function inst {
   if [ -f ~/."$1" ] ; then
     DIFF=$(diff ~/."$1" "$SCRIPT_DIR"/master-config/."$1")
     if [ "$DIFF" != "" ] ; then
-      error "Skipping $1, because there's a different local version"
+      warn "Skipping ~/.$1,  because there's a different local version"
     fi
   else 
     log "Installing $1"
