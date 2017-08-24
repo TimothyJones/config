@@ -21,6 +21,9 @@ set virtualedit=all
 " Search as you type, oh yeah!
 set incsearch
 
+" Get the column number etc in the bottom right
+set ruler
+
 " Uncomment if you want mouse support. 
 " Not so good on a remote system, of course
 " set mouse=a
