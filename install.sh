@@ -2,6 +2,12 @@
 SCRIPT_DIR=`cd $(dirname "$0"); pwd` # Script can now run from anywhere
 . "$SCRIPT_DIR"/timbash/lib/lib-logging.sh       # Set up logging
 
+log "Creating ~/.timconfig local settings"
+cat > ~/.timconfig <<- EOM
+# This file contains local config settings for the timconfig repo
+export TIMCONFIG_HOME=$SCRIPT_DIR
+EOM
+
 function inst {
   if [ -f ~/."$1" ] ; then
     DIFF=$(diff ~/."$1" "$SCRIPT_DIR"/master-config/."$1")
@@ -26,10 +32,3 @@ inst gitignore_global
 log "Configuring git to always use ssh and use gitignore_global" 
 git config --global url."git@github.com:".insteadOf "https://github.com/" # This allows private repos in Go, among other things
 git config --global core.excludesfile ~/.gitignore_global
-
-log "Creating .timconfig"
-
-cat > ~/.timconfig <<- EOM
-# This file contains local config settings for the timconfig repo
-export TIMCONFIG_HOME=$SCRIPT_DIR
-EOM
