@@ -1,0 +1,3 @@
+[submodule "timbash"]
+	path = timbash
+	url = git@github.com:TimothyJones/timbash.git
