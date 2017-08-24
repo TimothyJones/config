@@ -18,7 +18,9 @@ function inst {
 }
 
 inst vimrc
+inst bashrc
 inst profile
+inst bash_profile
 inst gitignore_global
 
 log "Configuring git to always use ssh and use gitignore_global" 
