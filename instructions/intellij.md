@@ -5,6 +5,7 @@
 * IdeaVim
 * Save Actions
 * Scala
+* Scalafmt
 * VisualVM Launcher
 
 ## Settings
@@ -17,4 +18,6 @@
 ** `Java->Insert imports on paste: All`
 ** `Java->Add unambiguous imports on the fly`
 
-* Autoformat on save: `Other Settings->Save Actions: Reformat File` and `Reformat only changed code`.
+* Autoformat on save: `Other Settings->Save Actions`
+** Check `Reformat File` and `Reformat only changed code`
+** File path exclusions `.*\properties`
