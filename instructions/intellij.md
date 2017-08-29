@@ -15,9 +15,11 @@
 * Rebase on pull: `Version Control->Git->Update method: Rebase`
 
 * Better auto import: `Editor->General->Auto Import`
-** `Java->Insert imports on paste: All`
-** `Java->Add unambiguous imports on the fly`
+    * Check `Java->Insert imports on paste: All`
+    * Check `Java->Add unambiguous imports on the fly`
+    * Check `Scala->Add unambiguous imports on the fly`
 
-* Autoformat on save: `Other Settings->Save Actions`
-** Check `Reformat File` and `Reformat only changed code`
-** File path exclusions `.*\properties`
+* Save actions: `Other Settings->Save Actions`
+    * Check `Reformat File`
+    * Check `Reformat only changed code`
+    * File path exclusions, add: `.*\properties`
