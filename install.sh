@@ -41,7 +41,10 @@ function inst {
 for f in .vimrc .bashrc .profile .bash_profile .gitignore_global; do
   inst $f
 done
-  
+ 
+log "Ensuring ~/.local_env exists"
+touch ~/.local_env
+
 log "Configuring git to always use ssh and use gitignore_global" 
 git config --global url."git@github.com:".insteadOf "https://github.com/" # This allows private repos in Go, among other things
 git config --global core.excludesfile ~/.gitignore_global
