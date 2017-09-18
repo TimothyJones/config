@@ -7,6 +7,11 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GF'
 
+# Coloured cat
+if ccat_loc="$(type -p "ccat")" || [ -z "$ccat_loc" ]; then
+  alias cat='ccat --bg=dark'
+fi
+
 # Default editor is vim
 export EDITOR=vim
 
