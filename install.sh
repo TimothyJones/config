@@ -38,6 +38,7 @@ function inst {
   fi
 }
 
+# Todo: Extract these files to a separate list
 for f in .vimrc .bashrc .profile .bash_profile .gitignore_global; do
   inst $f
 done
@@ -47,6 +48,7 @@ if [ "$(uname)" == "Darwin" ]; then
   if ! brew_loc="$(type -p "brew")" || [ -z "$brew_loc" ]; then
     warn "Homebrew appears not to be installed, skipping installation of packages"
   else
+    # Todo: Extract homebrew packages - maybe this whole thing should be a homebrew package?
     for f in ccat wget; do 
       log "Installing $f"
       brew install $f || brew upgrade $f
