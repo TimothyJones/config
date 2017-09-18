@@ -41,7 +41,19 @@ function inst {
 for f in .vimrc .bashrc .profile .bash_profile .gitignore_global; do
   inst $f
 done
- 
+
+if [ "$(uname)" == "Darwin" ]; then
+  log "OSX specific installation..."
+  if ! brew_loc="$(type -p "brew")" || [ -z "$brew_loc" ]; then
+    warn "Homebrew appears not to be installed, skipping installation of packages"
+  else
+    for f in ccat wget; do 
+      log "Installing $f"
+      brew install $f || brew upgrade $f
+    done
+  fi
+fi
+
 log "Ensuring ~/.local_env exists"
 touch ~/.local_env
 
