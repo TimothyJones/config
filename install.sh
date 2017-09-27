@@ -60,9 +60,10 @@ fi
 log "Ensuring ~/.local_env exists"
 touch ~/.local_env
 
-log "Configuring git to always use ssh and use gitignore_global, and to rebase on pull" 
+log "Configuring git to always use ssh, use gitignore_global, to allow git git git, and to rebase on pull" 
 git config --global url."git@github.com:".insteadOf "https://github.com/" # This allows private repos in Go, among other things
 git config --global core.excludesfile ~/.gitignore_global
-git config --global pull.rebase true
+git config --global pull.rebase true      
+git config --global alias.git '!exec git'
 
 trap 'log "Install success"' 0
