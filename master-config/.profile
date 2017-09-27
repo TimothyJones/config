@@ -3,8 +3,6 @@
 
 # Import settings for timconfig, if any
 . ~/.timconfig
-# Import local changes to config
-. ~/.local_env
 
 # Scala and Gradle settings
 export SCALA_HOME=/usr/local/share/scala
@@ -19,3 +17,6 @@ export AWS_DEFAULT_REGION=$AWS_REGION
 
 # Path
 export PATH=$PATH:$SCALA_HOME/bin:~/go/bin:$TIMCONFIG_HOME/timbash/bin
+
+# Import local changes to config
+. ~/.local_env
