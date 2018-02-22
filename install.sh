@@ -71,5 +71,8 @@ git config --global pull.rebase true
 git config --global rebase.autoStash true
 # Allow git to understand the command `git`, so you can type 'git git git git stash'
 git config --global alias.git '!exec git'
+# Let git push branches that origin doesn't know about
+git config --global push.default current
+
 
 trap 'log "Install success"' 0
