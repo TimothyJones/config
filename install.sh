@@ -40,7 +40,7 @@ function inst {
 }
 
 # Todo: Extract these files to a separate list
-for f in .vimrc .bashrc .profile .bash_profile .gitignore_global; do
+for f in .vimrc .bashrc .profile .bash_profile .gitignore_global .git-prompt-colors.sh ; do
   inst $f
 done
 
@@ -50,7 +50,7 @@ if [ "$(uname)" == "Darwin" ]; then
     warn "Homebrew appears not to be installed, skipping installation of packages"
   else
     # Todo: Extract homebrew packages - maybe this whole thing should be a homebrew package?
-    for f in ccat wget; do 
+    for f in ccat wget bash-git-prompt; do 
       log "Installing $f"
       brew install $f || brew upgrade $f
     done
@@ -73,6 +73,5 @@ git config --global rebase.autoStash true
 git config --global alias.git '!exec git'
 # Let git push branches that origin doesn't know about
 git config --global push.default current
-
 
 trap 'log "Install success"' 0

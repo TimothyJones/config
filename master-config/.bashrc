@@ -15,6 +15,14 @@ fi
 # Default editor is vim
 export EDITOR=vim
 
-# Set up a pretty coloured prompt:
-# login@machine working/directory$
-export PS1="\[\033[38;5;033m\]\u\[\033[m\]@\[\033[38;5;075m\]\h:\[\033[38;5;021m\]\w\[\033[m\]\$ "
+
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  export GIT_PROMPT_THEME=Custom
+  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+else 
+  # Set up a pretty coloured prompt:
+  # login@machine working/directory$
+  export PS1="\[\033[38;5;033m\]\u\[\033[m\]@\[\033[38;5;075m\]\h:\[\033[38;5;021m\]\w\[\033[m\]\$ "
+fi
+
