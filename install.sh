@@ -31,7 +31,7 @@ function inst {
     if [ "$DIFF" != "" ] ; then
       warn "Skipping ~/$1,  because there's a different local version"
     else 
-      warn "Already installed: $1"
+      log "Already installed: $1"
     fi
   else 
     log "Installing $1"
