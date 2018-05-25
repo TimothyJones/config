@@ -50,7 +50,7 @@ if [ "$(uname)" == "Darwin" ]; then
     warn "Homebrew appears not to be installed, skipping installation of packages"
   else
     # Todo: Extract homebrew packages - maybe this whole thing should be a homebrew package?
-    for f in ccat wget bash-git-prompt; do 
+    for f in ccat wget bash-git-prompt grep; do 
       log "Installing $f"
       brew install $f || brew upgrade $f
     done
