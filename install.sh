@@ -54,7 +54,7 @@ if [ "$(uname)" == "Darwin" ]; then
       log "Installing $f"
       brew install $f || brew upgrade $f
     done
-    brew install grep --with-default-names || brew upgrade grep --with-default-names
+    brew install --with-default-names grep || brew upgrade --with-default-names grep
   fi
 fi
 
