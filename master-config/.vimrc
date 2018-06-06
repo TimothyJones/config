@@ -10,10 +10,18 @@ syntax on
 " tabs - two characters, spaces only
 " actual tab characters are 4 characters, 
 " so you can spot them!
+" Also, let tabs exist in Makefiles
+let _curfile = expand("%:t")
+if _curfile =~ "Makefile" || _curfile =~ "makefile" || _curfile =~ ".*\.mk"
+set noexpandtab
+else
 set softtabstop=2
 set shiftwidth=2
 set tabstop=4
 set expandtab
+endif
+
+
 
 " cursor can go anywhere in command mode
 set virtualedit=all
