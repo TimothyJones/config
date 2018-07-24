@@ -75,4 +75,7 @@ git config --global alias.git '!exec git'
 # Let git push branches that origin doesn't know about
 git config --global push.default current
 
+log "Installing nvm"
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
 trap 'log "Install success"' 0
