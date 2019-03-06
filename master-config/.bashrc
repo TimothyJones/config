@@ -13,6 +13,9 @@ if ccat_loc="$(type -p "ccat")" || [ -z "$ccat_loc" ]; then
   alias cat='ccat --bg=dark'
 fi
 
+# Coloured grep
+export GREP_OPTIONS='--color=auto'
+
 # Default editor is vim
 export EDITOR=vim
 
