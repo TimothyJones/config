@@ -14,7 +14,9 @@ if ccat_loc="$(type -p "ccat")" || [ -z "$ccat_loc" ]; then
 fi
 
 # Coloured grep
-export GREP_OPTIONS='--color=auto'
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
 
 # Default editor is vim
 export EDITOR=vim
