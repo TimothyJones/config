@@ -14,8 +14,14 @@ override_git_prompt_colors() {
   GIT_PROMPT_CHANGED="${Red}≈"
   GIT_PROMPT_STAGED="${Green}●"
 
-  GIT_PROMPT_START_USER="_LAST_COMMAND_INDICATOR_ ${USER_COLOUR}\u${White}@${HOST_COLOUR}\h${White}:${USER_COLOUR}\w${ResetColor}"
-  GIT_PROMPT_START_ROOT="_LAST_COMMAND_INDICATOR_ ${BoldRed}\u${White}@${HOST_COLOUR}\h${White}:${USER_COLOUR}\w${ResetColor}"
+  if [ -z ${AWS_PROFILE:-} ]; then
+    AWS_STRING=''
+  else
+    AWS_STRING="${Green}[$AWS_PROFILE] "
+  fi
+
+  GIT_PROMPT_START_USER="_LAST_COMMAND_INDICATOR_ ${AWS_STRING}${USER_COLOUR}\u${White}@${HOST_COLOUR}\h${White}:${USER_COLOUR}\w${ResetColor}"
+  GIT_PROMPT_START_ROOT="_LAST_COMMAND_INDICATOR_ ${AWS_STRING}${BoldRed}\u${White}@${HOST_COLOUR}\h${White}:${USER_COLOUR}\w${ResetColor}"
 
   GIT_PROMPT_END_USER="${ResetColor}$ "
   GIT_PROMPT_END_ROOT="# ${ResetColor}"
