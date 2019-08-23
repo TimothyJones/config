@@ -1,7 +1,7 @@
 #!/bin/bash -eu
-SCRIPT_DIR=$(cd "$(dirname "$0")"; pwd) # Script can now run from anywhere
-# shellcheck source=timbash/lib/lib-bash.sh
-. "$SCRIPT_DIR"/timbash/lib/lib-bash.sh       # Set up logging
+SCRIPT_DIR="$(cd "$(dirname "$0")"; pwd)" # Script can now run from anywhere
+# shellcheck source=lib/lib-bash.sh
+. "$SCRIPT_DIR"/lib/lib-robust-bash.sh       # Set up logging
 
 trap 'error "Installation failed"' 0
 require_binary git
