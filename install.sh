@@ -4,6 +4,8 @@ SCRIPT_DIR=$(cd "$(dirname "$0")"; pwd) # Script can now run from anywhere
 . "$SCRIPT_DIR"/timbash/lib/lib-bash.sh       # Set up logging
 
 trap 'error "Installation failed"' 0
+require_binary git
+require_binary curl
 
 # local settings
 function timconfig_contents {
@@ -63,7 +65,6 @@ fi
 log "Ensuring ~/.local_env exists"
 touch ~/.local_env
 
-require_binary git
 
 log "Configuring git to always use ssh, use gitignore_global, to allow git git git, and to rebase on pull" 
 # Use ssh (which allows private repos in Go, among other things)
@@ -79,7 +80,6 @@ git config --global alias.git '!exec git'
 # Let git push branches that origin doesn't know about
 git config --global push.default current
 
-require_binary curl
 
 log "Installing nvm"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
