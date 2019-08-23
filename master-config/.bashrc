@@ -8,6 +8,11 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GF'
 alias ll='ls -lah'
 
+# Thanks to Beth Skurrie
+function what-is-running-on-port() {
+ lsof -i tcp:$1
+}
+
 # Coloured cat
 if ccat_loc="$(type -p "ccat")" || [ -z "$ccat_loc" ]; then
   alias cat='ccat --bg=dark'
