@@ -16,7 +16,7 @@ export AWS_REGION=ap-southeast-2
 export AWS_DEFAULT_REGION=$AWS_REGION
 
 # Path
-export PATH=$PATH:$SCALA_HOME/bin:~/go/bin:$TIMCONFIG_HOME/bin
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH:$SCALA_HOME/bin:~/go/bin:$TIMCONFIG_HOME/bin
 
 # Import local changes to config
 . ~/.local_env

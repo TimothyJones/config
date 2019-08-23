@@ -55,10 +55,9 @@ if [ "$(uname)" == "Darwin" ]; then
     require_binary brew
     # Todo: Extract homebrew packages - maybe this whole thing should be a homebrew package?
     for f in ccat wget bash-git-prompt fzf gzip grep shellcheck; do
-      log "Installing $f"
+      log "Installing / upgrading $f"
       brew install $f || brew upgrade $f
     done
-    brew install --with-default-names grep || brew upgrade --with-default-names grep
   fi
 fi
 
