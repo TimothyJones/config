@@ -11,6 +11,12 @@ git clone https://github.com/TimothyJones/timconfig.git
 timconfig/install.sh
 ```
 
+## Install apps
+
+* [iterm2](https://iterm2.com/)
+* [atom](https://atom.io/)
+* [Intellij](https://www.jetbrains.com/idea/)
+
 ## Configure apps
 
 * [Intellij settings](instructions/intellij.md)
