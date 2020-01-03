@@ -16,6 +16,7 @@ timconfig/install.sh
 * [iterm2](https://iterm2.com/)
 * [atom](https://atom.io/)
 * [Intellij](https://www.jetbrains.com/idea/)
+* [yEd](https://www.yworks.com/products/yed/download#download)
 
 ## Configure apps
 
