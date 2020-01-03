@@ -20,6 +20,7 @@ timconfig/install.sh
 ## Configure apps
 
 * [Intellij settings](instructions/intellij.md)
+* [atom plugins](instructions/atom.md)
 
 ## Misc commands
 
