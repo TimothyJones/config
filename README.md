@@ -14,14 +14,14 @@ git clone https://github.com/TimothyJones/config.git
 ## Install apps
 
 * [iterm2](https://iterm2.com/)
-* [atom](https://atom.io/)
+* [VScode](https://code.visualstudio.com/)
 * [Intellij](https://www.jetbrains.com/idea/)
 * [yEd](https://www.yworks.com/products/yed/download#download)
 
 ## Configure apps
 
 * [Intellij settings](instructions/intellij.md)
-* [atom plugins](instructions/atom.md)
+* [atom plugins](instructions/atom.md) (I no longer user Atom)
 
 ## Misc commands
 
