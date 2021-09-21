@@ -7,8 +7,8 @@ Configuration settings that I find useful. Probably not useful to you?
 ## Install vimrc, bash profile, and configure git
 
 ```
-git clone https://github.com/TimothyJones/timconfig.git
-timconfig/install.sh
+git clone https://github.com/TimothyJones/config.git
+./config/install.sh
 ```
 
 ## Install apps
