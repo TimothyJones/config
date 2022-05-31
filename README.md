@@ -11,6 +11,8 @@ git clone https://github.com/TimothyJones/config.git
 ./config/install.sh
 ```
 
+Install powerline https://github.com/powerline/fonts
+
 ## Install apps
 
 * [iterm2](https://iterm2.com/)

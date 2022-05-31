@@ -2,30 +2,10 @@
 # for example editor, aliases etc. It's loaded when opening a new
 # bash shell
 
-# Coloured ls
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
-alias ls='ls -GF'
-alias ll='ls -lah'
-
 # Thanks to Beth Skurrie
 function what-is-running-on-port() {
  lsof -i tcp:$1
 }
-
-# Coloured cat
-if ccat_loc="$(type -p "ccat")" || [ -z "$ccat_loc" ]; then
-  alias cat='ccat --bg=dark'
-fi
-
-# Coloured grep
-alias grep="grep --color=auto"
-alias fgrep="fgrep --color=auto"
-alias egrep="egrep --color=auto"
-
-# Default editor is vim
-export EDITOR=vim
-
 
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   export GIT_PROMPT_THEME=Custom
@@ -37,7 +17,6 @@ else
   export PS1="\[\033[38;5;033m\]\u\[\033[m\]@\[\033[38;5;075m\]\h:\[\033[38;5;021m\]\w\[\033[m\]\$ "
 fi
 
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source ~/.timconfig-aliases
+source ~/.timconfig-env
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

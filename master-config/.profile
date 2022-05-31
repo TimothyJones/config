@@ -18,5 +18,8 @@ export AWS_DEFAULT_REGION=$AWS_REGION
 # Path
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH:$SCALA_HOME/bin:~/go/bin:$TIMCONFIG_HOME/bin
 
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Import local changes to config
 . ~/.local_env

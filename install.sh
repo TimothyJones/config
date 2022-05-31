@@ -43,7 +43,7 @@ function inst {
 }
 
 # Todo: Extract these files to a separate list
-for f in .vimrc .bashrc .profile .bash_profile .gitignore_global .git-prompt-colors.sh ; do
+for f in .vimrc .bashrc .profile .bash_profile .gitignore_global .git-prompt-colors.sh .zshrc .timconfig-aliases .timconfig-env ; do
   inst $f
 done
 
@@ -58,6 +58,9 @@ if [ "$(uname)" == "Darwin" ]; then
       log "Installing / upgrading $f"
       brew install $f || brew upgrade $f
     done
+
+    # Install fzf's completions etc
+    yes | "$(brew --prefix)"/opt/fzf/install
   fi
 fi
 
@@ -78,6 +81,11 @@ git config --global rebase.autoStash true
 git config --global alias.git '!exec git'
 # Let git push branches that origin doesn't know about
 git config --global push.default current
+
+if [ "$(uname)" == "Darwin" ]; then
+  # Use OSX keychain for credentials on OSX
+  git config --global credential.helper osxkeychain
+fi
 
 
 log "Installing nvm"

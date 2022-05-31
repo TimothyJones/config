@@ -1,0 +1,16 @@
+# Coloured ls
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+alias ls='ls -GF'
+alias ll='ls -lah'
+
+# Coloured cat
+alias cat='ccat --bg=dark'
+
+
+# Coloured grep
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
+
+alias env="env | sort | ccat --bg=dark"
