@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # This file contains configuration settings not related to the shell.
 # It includes environment variables that we want to be available everywhere
 
@@ -5,8 +7,8 @@
 . ~/.timconfig
 
 # Scala and Gradle settings
-export SCALA_HOME=/usr/local/share/scala
-export GRADLE_USER_HOME=/usr/local/opt/gradle/libexec/
+# export SCALA_HOME=/usr/local/share/scala
+# export GRADLE_USER_HOME=/usr/local/opt/gradle/libexec/
 
 # Go settings
 export GOPATH=~/go

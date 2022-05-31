@@ -6,7 +6,7 @@
 if [ -z "${TIMLIB_BASH_SH:-}" ]; then
   TIMLIB_BASH_SH=yes
 
-  function set_TIMBASH_DIR {
+  set_TIMBASH_DIR() {
     SOURCE="${BASH_SOURCE[0]}"
     while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
       DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
@@ -20,7 +20,7 @@ if [ -z "${TIMLIB_BASH_SH:-}" ]; then
   . "$TIMBASH_DIR"/lib-logging.sh
 
   # Check to see that we have a required binary on the path
-  function require_binary {
+  require_binary() {
     if [ -z "${1:-}" ]; then 
       error "${FUNCNAME[0]} requires an argument"
       exit 1
@@ -37,7 +37,7 @@ if [ -z "${TIMLIB_BASH_SH:-}" ]; then
   #   require_env_var VARIABLE_NAME
   # or 
   #   require_env_var VARIABLE_NAME "Some description of the variable printed when it is missing"
-  function require_env_var {
+  require_env_var() {
     var_name="${1:-}"
     if [ -z "${!var_name:-}" ]; then
       error "The required environment variable ${var_name} is empty"

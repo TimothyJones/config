@@ -105,4 +105,4 @@ source "$HOME/.profile"
 source "$HOME/.timconfig-aliases"
 source "$HOME/.timconfig-env"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="$HOME/.jenv/bin:$PATH"
+

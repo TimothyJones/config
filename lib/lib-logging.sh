@@ -14,44 +14,44 @@ if [ -z "${TIMLIB_LOGGING_SH:-}" ]; then
 
   TB_SCRIPTNAME=$(basename "$0")
 
-  function log() {
+  log() {
     echo -e "${blue}   log${end_colour}     ($TB_SCRIPTNAME): $* ${end_colour}"
   }
 
-  function error() {
+  error() {
     echo -e "${red}✘  error${end_colour}   ($TB_SCRIPTNAME): $* ${end_colour}"
   }
 
-  function warn() {
+  warn() {
     echo -e "${yellow}🔔 warn ${end_colour}   ($TB_SCRIPTNAME): $* ${end_colour}"
   }
 
-  function success() {
+  success() {
     echo -e "${green}✔  success${end_colour} ($TB_SCRIPTNAME): $* ${end_colour}"
   }
 
-  function success_banner() {
+  success_banner() {
       echo -e "${green}$(banner_border "$*")${end_colour}"
       echo -e "${green}$(banner_mid    "$*")${end_colour}"
       echo -e "${green}$(banner_border "$*")${end_colour}"
   }
 
-  function fail_banner() {
+  fail_banner() {
       echo -e "${red}$(banner_border "$*")${end_colour}"
       echo -e "${red}$(banner_mid    "$*")${end_colour}"
       echo -e "${red}$(banner_border "$*")${end_colour}"
   }
 
-  function banner_border() {
+  banner_border() {
       banner_mid "$*" | sed 's/./*/g'
   }
 
   # banner based on https://unix.stackexchange.com/a/250094
-  function banner_mid() {
+  banner_mid() {
       echo "* $* *"
   }
 
-  function banner() {
+  banner() {
       banner_border "$*"
       banner_mid "$*"
       banner_border "$*"
