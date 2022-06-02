@@ -1,5 +1,4 @@
 " Tim Jones' vimrc
-" jonestim.com
 " You may or may not find this useful
 
 " Let's have line numbers and syntax highlighting
