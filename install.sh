@@ -81,6 +81,8 @@ git config --global rebase.autoStash true
 git config --global alias.git '!exec git'
 # Let git push branches that origin doesn't know about
 git config --global push.default current
+# Use main for default default branch
+git config --global init.defaultBranch main
 
 if [ "$(uname)" == "Darwin" ]; then
   # Use OSX keychain for credentials on OSX
