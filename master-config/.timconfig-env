@@ -3,8 +3,9 @@
 # Default editor is vim
 export EDITOR=vim
 
+
 # These commands work in both zsh and bash
-if [ -f "$HOME/.nvm" ]; then
+if [ -d "$HOME/.nvm" ]; then
     # nvm is installed
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
