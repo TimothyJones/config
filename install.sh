@@ -83,6 +83,8 @@ git config --global alias.git '!exec git'
 git config --global push.default current
 # Use main for default default branch
 git config --global init.defaultBranch main
+# Automatically setup remote tracking on push (so you don't have to do `git push -u` every time)
+git config --global push.autoSetupRemote true
 
 if [ "$(uname)" == "Darwin" ]; then
   # Use OSX keychain for credentials on OSX
